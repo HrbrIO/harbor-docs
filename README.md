@@ -17,14 +17,8 @@ For Mac run `brew install mkdocs`.
 ## Install mkdocs-material.
 
 You need to have npm installed on this system.  The base python that comes with your system will work fine.
-
-From the harbor-docs directory run
-
-`git clone https://github.com/squidfunk/mkdocs-material.git`
-
-Do not use pip or any other installer to install **mkdocs-material**.  In order for our customizations to work you have to install as a clone the mkdocs-material repo.
     
-`cd mkdocs-material\` 
+`cd mkdocs-material` 
 
 `npm install`
 
