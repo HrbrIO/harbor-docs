@@ -1,0 +1,43 @@
+site_name: Harbor Docs
+
+theme:
+#    name: cinder
+    name: null
+    custom_dir: mkdocs-material/material
+    theme_dir: mkdocs-material/material
+    logo: img/HarborIconWhite.png
+    language: en
+    palette: default
+    font: default
+    feature: default
+#      tabs: true
+    favicon: 'img/favicon.ico'
+    highlightjs: true
+
+
+nav:
+    - Home: index.md
+    - Getting Started:
+        - Quick Start: quick-start-guide.md
+        - Basic Terminology: basic-terminology.md
+    - How-To Guides:
+        - Slack Integration:  slack-integration.md
+#        - Add an Application: quick-start-guide.md/#add-an-application
+    - API Docs: api.md
+    - Community: https://shiptoshore.hrbr.io
+
+
+# repo_url: https://github.com/hrbrio
+
+markdown_extensions:
+  - tables
+  - admonition
+  - codehilite
+  - pymdownx.details
+  - toc:
+       permalink: true
+
+extra_css:
+  - stylesheets/extra.css
+
+dev_addr: 0.0.0.0:8000
