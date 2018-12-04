@@ -22,7 +22,7 @@ You will the be brought to the Slack API screen.  From that screen select the <b
 
 You will then see the Create App Screen.  Give a name to your app and choose the workspace you would like the app to communicate with.  Then hit <button style="background:green;color:white;font-weight:bold">Create  App</button>.
 
-![create-slack-app](img/slack-integration/create-slack-app.png)
+    ![create-slack-app](img/slack-integration/create-slack-app.png)
 
 You will now be sent to the **Basic Info** screen for you app.  Select the **Incoming Webhooks** option.
 
