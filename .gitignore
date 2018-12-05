@@ -1,0 +1,5 @@
+site/
+.DS_Store
+.idea
+.remote-sync.json
+
