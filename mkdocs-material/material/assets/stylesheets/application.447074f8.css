@@ -176,7 +176,7 @@ kbd {
     margin: 1.5em 0;
     border-bottom: 0.1rem dotted rgba(0, 0, 0, 0.26); }
   .md-typeset a {
-    color: #286bb5;
+    color: #2990ff;
     word-break: break-word; }
     .md-typeset a, .md-typeset a::before {
       transition: color 0.125s; }
@@ -562,7 +562,7 @@ hr {
   left: 0;
   height: 4.8rem;
   transition: background-color 0.25s, color 0.25s;
-  background-color: #286bb5;
+  background-color: #2990ff;
   color: white;
   box-shadow: none;
   z-index: 2;
@@ -642,7 +642,7 @@ hr {
 
 .md-hero {
   transition: background 0.25s;
-  background-color: #286bb5;
+  background-color: #2990ff;
   color: white;
   font-size: 2rem;
   overflow: hidden; }
@@ -786,7 +786,7 @@ hr {
     .md-nav__link[data-md-state="blur"] {
       color: rgba(0, 0, 0, 0.54); }
     .md-nav__link:active, .md-nav__link--active {
-      color: #286bb5; }
+      color: #2990ff; }
     .md-nav__item--nested > .md-nav__link {
       color: inherit; }
     .md-nav__link:focus, .md-nav__link:hover {
@@ -1109,7 +1109,7 @@ hr {
 .md-tabs {
   width: 100%;
   transition: background 0.25s;
-  background-color: #286bb5;
+  background-color: #2990ff;
   color: white;
   overflow: auto; }
   .md-tabs__list {
@@ -2062,7 +2062,7 @@ hr {
     .md-nav__source {
       display: block;
       padding: 0 0.4rem;
-      background-color: rgba(32, 85, 144, 0.9675);
+      background-color: rgba(33, 115, 203, 0.9675);
       color: white; }
     .md-search__overlay {
       position: absolute;
@@ -2188,7 +2188,7 @@ hr {
             border-top: 0; }
         html .md-nav--primary .md-nav__title--site {
           position: relative;
-          background-color: #286bb5;
+          background-color: #2990ff;
           color: white; }
           html .md-nav--primary .md-nav__title--site .md-nav__button {
             display: block;
@@ -2560,4 +2560,4 @@ hr {
         max-height: 5rem;
         -webkit-line-clamp: 3; } }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc3NldHMvc3R5bGVzaGVldHMvYXBwbGljYXRpb24uNGIzYjRkNzAuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJhc3NldHMvc3R5bGVzaGVldHMvYXBwbGljYXRpb24uNDQ3MDc0ZjguY3NzIiwic291cmNlUm9vdCI6IiJ9*/

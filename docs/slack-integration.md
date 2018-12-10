@@ -9,10 +9,10 @@ __Harbor__  | Any Harbor user can perform this action.
 
 ## Slack
 
-In the Slack choose **Channels ⨁**.  Add a channel call foghorns.
+In the Slack app choose **Channels ⨁**.  Add a channel called foghorns.
 
 !!! Tip
-    You can use an existing channel designed for monitoring alerts, but of course foghorns is the most descprtive.
+    You can use an existing channel designed for monitoring alerts, but of course foghorns is the most descriptive.
 
 Then click on your org name to choose the main Slack menu.  Select **Administration > Manage apps**.
 
@@ -42,6 +42,6 @@ And now Slack will have created your webhook url.  You will see it at the bottom
 
 ## Harbor
 
-Now proceed back to [cloud.hrbr.io](https://cloud.hrbr.io).  Selected the app you would like to add the Slack Foghorn alert to.  Add a new foghorn or edit an existing one.  Choose <button>Add a Response ∨</button> and select **Add Slack Response**.  Then copy your Slack web hook into the **Hook URL** field and choose the <button style="background-color:gray; color:white">Submit</button>.  Your are good to go!
+Now proceed back to [cloud.hrbr.io](https://cloud.hrbr.io).  Select the app you would like to add the Slack Foghorn alert to.  Add a new foghorn or edit an existing one.  Choose <button>Add a Response ∨</button> and select **Add Slack Response**.  Then copy your Slack web hook into the **Hook URL** field and choose the <button style="background-color:gray; color:white">Submit</button>.  Your are good to go!
 
 ![add-hook-harbor](img/slack-integration/add-hook-harbor.png)
