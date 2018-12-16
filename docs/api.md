@@ -149,7 +149,7 @@ The simplest way to see your Web Socket streams is directly at [Harbor Cloud](ht
 
 To check other streams here are two of many ways to check yours.
 
-1. Check it out in browser at [websocket.org](https://websocket.org/echo.html)
+1. Check it out in browser at [websocket.org](https://websocket.org/echo.html).
 2. Install a Chrome extension such as [Simple Web Socket](https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en).
 
 There you have it.  Stay tuned for even more examples and calls in the future.
