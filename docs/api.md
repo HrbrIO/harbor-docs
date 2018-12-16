@@ -139,13 +139,13 @@ Sample url:
 
 Methods to test your streams.
 
-The simplest way to see your Web Socket streams is directly at [Harbor Cloud]('https://cloud.hrbr.io/#!/apps/list').  There you can `go to developer console` and choose `raw console` to see your Web Socket stream and the actuall url.
+The simplest way to see your Web Socket streams is directly at [Harbor Cloud](https://cloud.hrbr.io/#!/apps/list).  There you can `go to developer console` and choose `raw console` to see your Web Socket stream and the actuall url.
 
 ![Raw Console](img/api-docs/raw-console.png)
 
 To check other streams here are two of many ways to check yours.
 
-1. Check it out in browser at [websocket.org]('https://websocket.org/echo.html')
-2. Install a Chrome extension such as [Simple Web Socket]('https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en').
+1. Check it out in browser at [websocket.org](https://websocket.org/echo.html)
+2. Install a Chrome extension such as [Simple Web Socket](https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en).
 
 There you have it.  Stay tuned for even more examples and calls in the future.
