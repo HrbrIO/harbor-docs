@@ -137,7 +137,7 @@ Sample url:
 
 `wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/application/4539a508-e3aa-1004-8710-6bb8457af470/type/MONGOINFO`
 
-Methods to test your streams.
+### Methods to test your streams.
 
 The simplest way to see your Web Socket streams is directly at [Harbor Cloud](https://cloud.hrbr.io/#!/apps/list).  There you can `go to developer console` and choose `raw console` to see your Web Socket stream and the actuall url.
 
