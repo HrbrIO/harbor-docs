@@ -1,10 +1,14 @@
 # API Docs
 
-Welcomet to the Harbor API.  Today we only expose a couple of elements of our API during the alpha.  Everything in the system is accessible via the API (such as adding users, beacons, foghorns, etc.), but we won't be exposing those endpoints until the beta relase.  But for now you can do the two most important things on the system.  Send __beacon messages__ and connect to a __wss stream__ to view and manipulate those messages in your custom code.
+Welcomet to the Harbor API.  Today we only expose a couple of elements of our API during the alpha.  Everything in the system is accessible via the API (such as adding users, beacons, foghorns, etc.), but we won't be exposing those endpoints until the beta release.  But for now you can do the two most important things on the system.
 
-If you want to quickly brush up on our terminology, feel free to take a quick refresher at the [Basic Terminology](basic-terminology.md).
+1. Send __beacon messages__ to get data into HarborIconWhite
+2. Connect to a __wss stream__ to view and manipulate those messages in your environments and code.
 
-Before you start using the API you will also need to set up your app in the [Harbor UI](https://cloud.hrbr.io/).  Click here for a [Quick Start Guide](quick-start-guide.md) for complete instructions on how to do that.
+!!! info
+    If you want to quickly brush up on our terminology, feel free to take a quick refresher at the [Basic Terminology](basic-terminology.md).
+
+    Before you start using the API you will also need to set up your app in the [Harbor UI](https://cloud.hrbr.io/).  Click here for a [Quick Start Guide](quick-start-guide.md) for complete instructions on how to do that.
 
 ---
 ## Short Cuts
@@ -137,7 +141,7 @@ Sample url:
 
 `wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/application/4539a508-e3aa-1004-8710-6bb8457af470/type/MONGOINFO`
 
-### Methods to test your streams.
+### Test your streams
 
 The simplest way to see your Web Socket streams is directly at [Harbor Cloud](https://cloud.hrbr.io/#!/apps/list).  There you can `go to developer console` and choose `raw console` to see your Web Socket stream and the actuall url.
 

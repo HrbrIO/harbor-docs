@@ -4,13 +4,13 @@ theme:
 #    name: cinder
     name: null
     custom_dir: mkdocs-material/material
-    theme_dir: mkdocs-material/material
+#    theme_dir: mkdocs-material/material
     logo: img/HarborIconWhite.png
     language: en
     palette: default
     font: default
     feature: default
-#      tabs: true
+#    tabs: true
     favicon: 'img/favicon.ico'
     highlightjs: true
 
