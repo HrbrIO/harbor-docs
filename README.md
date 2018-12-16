@@ -31,4 +31,23 @@ Mkdocs allows you to run a local site to preview your changes.  Return to the ba
 
 `mkdocs serve`
 
+## Alternative Installation Instructions (from Mitch)
+
+Stock Python may not work due to missing libraries. To fix, do a reinstall via brew:
+
+`brew reinstall python@2`
+
+Supposedly Mkdocs will also work with Python 3, but I haven't tried it.
+
+Once the build is done (a while), install the required packages MANUALLY since the sourcing from the `requirements.txt` may not work (it did not for me):
+
+`pip install mkdocs`  
+`pip install Pygments`  
+`pip install pymdown-extensions`  
+           
+Then `cd mkdocs-material`, `npm install`, `npm run build`.
+
+Now `cd ..` and `mkdocs serve`. Voila.
+
+
 
