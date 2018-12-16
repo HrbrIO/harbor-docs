@@ -27,7 +27,9 @@ Add an application ID.
 
 ![add-application](img/quick-start/application-screen.png)
 
-## Create a Beacon
+## Beacons
+
+### Create a Beacon
 Once you've added your application the first thing you have to do is add a Beacon in for that application.
 
 !!! Reminder
@@ -44,7 +46,7 @@ You can directly go to this Beacon at [ https://github.com/HrbrIO/LinuxSysInfoBe
 !!! info
     Follow the `READ.md` instructions on installing the Harbor System Information Beacon For Linux.
 
-## Registering the Beacon
+### Registering the Beacon
 
 You must register a Beacon before Harbor will accept messages from it.
 !!! info
@@ -99,6 +101,26 @@ And now you are are sending your first messages to Harbor.  You can double check
 The you can select go to developor options.  After waiting a few seconds you can see the Beacon messages.
 
 ![developer-view](img/quick-start/developer-view.png)
+
+### Test your Beacon
+
+If you want to try a simple curl code to make sure you system is receiving beacons you can go to edit the Beacon and the will be a `General Curl Sample` button.
+
+![Generate Curl](img/quick-start/curl-beacon.png)
+
+You will see a curl sample here:
+```
+curl -i -X POST \
+ -H "Accept: application/json" -H "Content-type: application/json" \
+ -H "apikey:YOUR_API_KEY_HERE" \
+ -H "appVersionId:tv.ourglass.cloud:1.0.0" \
+ -H "beaconVersionId:harbor-linux-sysinfo-beacon:0.1.2" \
+ -H "beaconInstanceId:cut-n-paste" \
+ -H "beaconMessageType:CURL_TEST" -d '{"message":"Hello from Curl!"}' \
+  https://harbor-stream.hrbr.io/beacon
+```
+
+You can find much more detailed instructions in playing around with the Beacon Messages in our [API Docs](api.md).
 
 ## Add a View
 
