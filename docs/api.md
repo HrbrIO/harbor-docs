@@ -7,19 +7,23 @@ If you want to quickly brush up on our terminology, feel free to take a quick re
 Before you start using the API you will also need to set up your app in the [Harbor UI](https://cloud.hrbr.io/).  Click here for a [Quick Start Guide](quick-start-guide.md) for complete instructions on how to do that.
 
 ---
-## Short Cut
-Don't like reading docs.  Here is a quick Curl Example and a super easy Postman link to dive right in.
+## Short Cuts
+For those who don't like reading docs here is a quick Curl Example and a super easy Postman link to dive right in.
 
 ### Curl
 ```
-curl -X POST \
-https://harbor-stream.hrbr.io/beacon \
--H 'Content-Type: application/json' \
--H 'apiKey: YOUR_API_KEY' \
--H 'appVersionId: APP_VERSION_ID' \
--H 'beaconVersionId: BEACON_VERSION_ID' \
--H 'cache-control: no-cache' \
--d '{"Message": "Hello from curl and Harbor!"}'
+curl -i -X POST \
+  https://harbor-stream.hrbr.io/beacon \
+  -H 'Content-Type: application/json' \
+  -H 'apiKey: YOUR_API_KEY' \
+  -H 'appVersionId: APP_VERSION_ID' \
+  -H 'beaconInstanceID: UNIQUE_SYSTEM_IDENTIFIER' \
+  -H 'beaconMessageType: TYPE_OF_MESSAGE' \
+  -H 'beaconVersionID: BEACON_VERSION_ID' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "YOUR":"VALID_JSON"
+}'
 ```
 ### Postman
 
@@ -31,14 +35,14 @@ ___
 ### Get your apiKey
 
 Currently Harbor uses your apiKey to authenticate all requests.  You can find your apiKey under your avatar at [Harbor Cloud]("https://cloud.hrbr.io/#") by clicking your avatar in the upper right hand corner.  ![apiKey](img/api-docs/find-apikey.png)
-App Harbor UUID__
 
-### Get your appVersionId
 
-You will have to have an app registered in the [Harbor UI](https://cloud.hrbr.io/#!/apps/list).  You can find the AppVersionId on the applications page.
+### Get your appVersionId and App Harbor UUID
+
+You will have to have an app registered in the [Harbor UI](https://cloud.hrbr.io/#!/apps/list).  You can find the AppVersionId and App Harbor UUID on the applications page.
 
 !!! Warning
-    You want to use the __AppVersionId__ not the __App Harbor UUID__.
+    You want to use the __AppVersionId__ not the __App Harbor UUID__ for your posts.
 
 ![appVersionID](img/api-docs/app-version-id.png)
 
@@ -51,7 +55,7 @@ The beaconVersionId will also need to be registered for the related appVersionId
 ---
 ## Send Beacon messages
 
-The basis of all that is Harbor. Send a boat load of messages.  Why not the first 5 million every month are free.  So let's start sending.
+The basis of all that is Harbor. Send a boat load of messages.  Why not? The first 5 million every month are free.  So let's start sending.
 
 ### Beacon Message Parameters
 
@@ -70,15 +74,78 @@ beaconInstanceId  |`UNIQUE_SYSTEM_ID`   |header|string   |__NO__|Takes an identi
 beaconMessageType  |`TYPE_OF_MESSAGE`   |header   |string |__KIND_OF__|  This is a meta field that allows you to look at similar beacons from multiple beaconVersionId's.  While this field is not mandatory, most of the UI features in `cloud.hrbr.io` require a beaconMessageType.
 dataTimestamp  |`TIME_STAMP_FROM_BEACON`   | header  |string   |__NO__   |  Harbor will put a timestamp on every message received at the time it is received.  If you are sending delayed messages or want the exact time something occured on your system you can add your own timestamp.
 
-### Curl example
+### Samples
+Remember you can check here for a [curl example](#curl) or here for a [Postman example](#postman).
 
-### Postman example
+----
 
-If you are a postman fan you can click here to get a template for you beacon message post.
-
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/7f988710d5854865c0e5)
-
-
-## Connect to Beacon stream
+## Connect to outbound Beacon streams
 
 Connecting to a beacon stream is a little different than a standard https post or get as we send the streams down a web-socket.
+
+Connecting to an outbound stream:
+The format of the URL is as follows:
+
+    wss://harbor-stream.hrbr.io/stream/YOUR_API_KEY
+    wss://harbor-stream.hrbr.io/stream/YOUR_API_KEY/beacon/BEACON_UUID
+    wss://harbor-stream.hrbr.io/stream/YOUR_API_KEY/beacon/BEACON_UUID/type/BEACON_MESSAGE_TYPE
+    wss://harbor-stream-hrbr.io/stream/YOUR_API_KEY/application/APP_UUID
+    wss://harbor-stream.hrbr.io/stream/YOUR_API_KEY/application/APP_UUID/type/BEACON_MESSAGE_TYPE
+
+You can receive a stream in three ways.
+
+### All Message Stream
+
+Parameter  |Required   | Description
+--|---|---
+YOUR_API_KEY  |  __YES__ | Your API Key
+
+This will send out every message on your API key which for now means every message coming into your organization. See [here](#get-your-apikey) to find out how to get your apiKey.
+
+Sample url:
+
+`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6`
+
+### Message by Beacon
+
+Parameter  |Required   | Description
+--|---|---
+YOUR_API_KEY  |  __YES__ | Your API Key
+BEACON_UUID  | __YES__  |
+BEACON_MESSAGE_TYPE   |__NO__| You can assign a beacon message type as an additional filter
+
+!!! Warning
+    Since streams require params in the URL we use the __Beacon UUID__ here not the __beaconVersionId__.
+
+Sample url:
+
+`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/beacon/953d849c-e365-1004-8599-42b1febe886f/type/MONGOINFO`
+
+
+### Message Stream by App
+
+Parameter  |Required   | Description
+--|---|---
+YOUR_API_KEY  |  __YES__ | Your API Key
+BEACON_UUID  | __YES__  |
+BEACON_MESSAGE_TYPE   |__NO__| You can assign a beacon message type as an additional filter
+
+!!! Warning
+    Since streams require params in the URL we use the __App Harbor UUID__ here not the __appVersionId__.
+
+Sample url:
+
+`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/application/4539a508-e3aa-1004-8710-6bb8457af470/type/MONGOINFO`
+
+Methods to test your streams.
+
+The simplest way to see your Web Socket streams is directly at [Harbor Cloud]('https://cloud.hrbr.io/#!/apps/list').  There you can `go to developer console` and choose `raw console` to see your Web Socket stream and the actuall url.
+
+![Raw Console](img/api-docs/raw-console.png)
+
+To check other streams here are two of many ways to check yours.
+
+1. Check it out in browser at [websocket.org]('https://websocket.org/echo.html')
+2. Install a Chrome extension such as [Simple Web Socket]('https://chrome.google.com/webstore/detail/simple-websocket-client/pfdhoblngboilpfeibdedpjgfnlcodoo?hl=en').
+
+There you have it.  Stay tuned for even more examples and calls in the future.

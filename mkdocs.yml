@@ -22,7 +22,6 @@ nav:
         - Basic Terminology: basic-terminology.md
     - How-To Guides:
         - Slack Integration:  slack-integration.md
-#        - Add an Application: quick-start-guide.md/#add-an-application
     - API Docs: api.md
     - Community: https://shiptoshore.hrbr.io
 
