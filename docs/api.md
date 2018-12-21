@@ -74,9 +74,9 @@ Content-Type|`application/json`   |  header  |string   |__YES__|Lets us know we 
 apiKey  |`YOUR_API_KEY`   |header   |string   |__YES__|  Your API Key
 beaconVersionId  |`BEACON_VERSION_ID`|heder   |string   |__YES__|The name of the beacon you are sending
 appVersionId  |`APP_VERSION_ID`   |header|string   |__YES__|The ID of the app in Harbor you want this beacon to identify with
-beaconInstanceId  |`UNIQUE_SYSTEM_ID`   |header|string   |__NO__|Takes an identifier suce as a `HOSTNAME` or `MAC address` so you can tell what system sent the beaon
+beaconInstanceId  |`UNIQUE_SYSTEM_ID`   |header|string   |__NO__|Takes an identifier such as a `HOSTNAME` or `MAC address` so you can tell what system sent the beacon
 beaconMessageType  |`TYPE_OF_MESSAGE`   |header   |string |__KIND_OF__|  This is a meta field that allows you to look at similar beacons from multiple beaconVersionId's.  While this field is not mandatory, most of the UI features in `cloud.hrbr.io` require a beaconMessageType.
-dataTimestamp  |`TIME_STAMP_FROM_BEACON`   | header  |integer   |__NO__   |  Harbor will put a timestamp on every message received at the time it is received.  If you are sending delayed messages or want the exact time something occured on your system you can add your own timestamp.  Milliseconds from the Epoch.
+dataTimestamp  |`TIME_STAMP_FROM_BEACON`   | header  |integer   |__NO__   |  Harbor will put a timestamp on every message received at the time it is received.  If you are sending delayed messages or want the exact time something occurred on your system you can add your own timestamp.  Milliseconds from the Epoch.
 
 ### Samples
 Remember you can check here for a [curl example](#curl) or here for a [Postman example](#postman).
