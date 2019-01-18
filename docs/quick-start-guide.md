@@ -2,7 +2,7 @@
 
 Before you start this guide you may want to familiarize yourself with our basic terminology.  Check it out here [Basic Terminology](basic-terminology.md)
 
-## Sign up for Harbor Account
+## Sign up for Hrbr Account
 
 You can use your Google Account ID, Github Login or just use your e-mail.
 
@@ -33,11 +33,11 @@ Add an application ID.
 Once you've added your application the first thing you have to do is add a Beacon in for that application.
 
 !!! Reminder
-    A Beacon collects data relevant to your application and sends that data to harbor.
+    A Beacon collects data relevant to your application and sends that data to Hrbr.
 
-Pre-written Beacon templates can be found in the Harbor Catalog.
+Pre-written Beacon templates can be found in the Hrbr Catalog.
 For this guide we will use a pre-written Beacon to check the system stats of one of our database servers.
-I'm going to the catalog to find `Hello, Harbor!`.  That's a beacon used for learning how to use Harbor.
+I'm going to the catalog to find `Hello, Harbor!`.  That's a beacon used for learning how to use Hrbr.
 You can directly go to this Beacon at [ https://github.com/HrbrIO/HelloHarborBeacon](https://github.com/HrbrIO/HelloHarborBeacon)
 
 ![catalog](img/quick-start/helloharbor-catalog.png)
@@ -45,11 +45,11 @@ You can directly go to this Beacon at [ https://github.com/HrbrIO/HelloHarborBea
 ![HelloHarborBeacon](img/quick-start/helloharbor-in-catalog.png)
 
 !!! info
-    Follow the `READ.md` instructions on installing the Harbor System Information Beacon For Linux.
+    Follow the `READ.md` instructions on installing the Hrbr System Information Beacon For Linux.
 
 ### Registering the Beacon
 
-You must register a Beacon before Harbor will accept messages from it.
+You must register a Beacon before Hrbr will accept messages from it.
 !!! info
     The `READ.md` for the HelloHarborBeacon tells us the default beaconVersionId is `io.hrbr.howdybeacon:1.0.0`
 
@@ -68,7 +68,7 @@ Click on the Beacons section below the app.
 Give the Beacon Version ID `io.hrbr.howdybeacon:1.0.0`.
 
 !!! Warning
-    You must make sure the Beacon Version ID matches the beaconVersionID in your Beacon.  Otherwise Harbor will not accept the Beacon.
+    You must make sure the Beacon Version ID matches the beaconVersionID in your Beacon.  Otherwise Hrbr will not accept the Beacon.
 
 Finally we need to configure our Beacon to send messages to to our API Key and to our Application `io.hrbr.helloapp:1.0.0`.  To find your API Key click on your user avatar in the upper right hand corner and select API Keys.
 
@@ -87,7 +87,7 @@ const API_KEY = 'GET_YOUR_API-KEY_FROM_WEBSITE';
 
 const APP_VERSION_ID = 'io.hrbr.helloapp:1.0.0';
 
-// You also need to have a beacon registered to your app in order for Harbor to accept the post. Beacons have a
+// You also need to have a beacon registered to your app in order for Hrbr to accept the post. Beacons have a
 // beaconVersionId which follows the same convention as the appVersionId, above. Let's use: io.hrbr.howdybeacon:1.0.0.
 
 // You will need to add this beacon to your app by going to the app details page on the website, then clicking + BEACON.
@@ -97,7 +97,7 @@ const BEACON_VERSION_ID = 'io.hrbr.howdybeacon:1.0.0';
 
 // Each Beacon can have any number of beaconMessageTypes (BMT). Some beacons send only one type. That's the case with this
 // example. A beacon message type is simply a string to help us identify different streams of monitoring data. Beacon Message
-// Types *do not* need to be pre-registered in order for Harbor to accept the message.
+// Types *do not* need to be pre-registered in order for Hrbr to accept the message.
 
 const BEACON_MESSAGE_TYPE = 'HELLO_HARBOR';
 
@@ -105,7 +105,7 @@ const BEACON_MESSAGE_TYPE = 'HELLO_HARBOR';
 
 The Hello Harbor Beacon runs a standalone app so we'll need to start it to collect information.  Go ahead and run `node .` in the base directory for the Beacon.
 
-And now you are are sending your first messages to Harbor.  You can double check what's coming into harbor by selecting your app.
+And now you are are sending your first messages to Hrbr.  You can double check what's coming into Hrbr by selecting your app.
 
 ![application-string](img/quick-start/helloharbor-application-screen.png)
 
@@ -128,7 +128,7 @@ curl -i -X POST \
  -H "beaconVersionId:io.hrbr.howdybeacon:1.0.0" \
  -H "beaconInstanceId:cut-n-paste" \
  -H "beaconMessageType:CURL_TEST" -d '{"message":"Hello from Curl!"}' \
-  https://harbor-stream.hrbr.io/beacon
+  https://Hrbr-stream.hrbr.io/beacon
 ```
 
 You can find much more detailed instructions in playing around with the Beacon Messages in our [API Docs](api.md).
@@ -154,7 +154,7 @@ Click to add a new view.  We'll name our `Hello Harbor Data`.
 After selecting the check mark we can choose the add chart button.  We are going to add a simple line chart. Name the chart as you see fit.  Then add `HELLO_HARBOR` into the Beacon Message Type.  We know HELLO_HARBOR is the Beacon Message Type for this by reading the config in the `index.js`
 
 !!! Info
-    BeaconMessageType is a way to tag your beacons.  It allows you to send different types of data with a single beacon or allows you to look at similar data from multiple beacons.  While not required to work with Harbor it is necessary if you want to use our internal View and Foghorn tools.
+    BeaconMessageType is a way to tag your beacons.  It allows you to send different types of data with a single beacon or allows you to look at similar data from multiple beacons.  While not required to work with Hrbr it is necessary if you want to use our internal View and Foghorn tools.
 
 ![configure-chart](img/quick-start/helloharbor-configure-chart.png)
 
@@ -162,7 +162,7 @@ Select Check to save your chart and you should be good to go.
 
 ![edit-view-with-chart](img/quick-start/helloharbor-edit-view-with-chart.png)
 
-To View the chart select View from the main menu and choose Display from Hello Harbor Data.
+To View the chart select View from the main menu and choose Display from Hello Hrbr Data.
 
 ![display-chart](img/quick-start/helloharbor-display-chart.png)
 
@@ -215,4 +215,4 @@ And if all is well you should start receiving e-mails every Hello Harbor generat
 
 
 !!! Summary
-    Now you should be familiar enough to start using pre-built Beacons to start getting insight on standard system issues.  Stay tuned for more in depth guides on creating your own Beacons from scratch and subscribing to Harbor streams to get use all the great data for your own custom Foghorns and Views.
+    Now you should be familiar enough to start using pre-built Beacons to start getting insight on standard system issues.  Stay tuned for more in depth guides on creating your own Beacons from scratch and subscribing to Hrbr streams to get use all the great data for your own custom Foghorns and Views.
