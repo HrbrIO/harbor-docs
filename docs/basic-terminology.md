@@ -5,7 +5,7 @@ Here is a quick guide to terms we use at Hrbr.  We know it's a lot of nautical t
 
 |   |   |
 | :--- | :--- |
-| User       | It's starts with you.  You can use your Google ID, GitHub ID, or you e-mail to identify you as a user.|
+| User       | It starts with you.  You can use your Google ID, GitHub ID, or you e-mail to identify you as a user.|
 |Organization| All Users must be part of an organization.  That way multiple members can create inputs, get insight or take action on that shared data.
 |Application|Since Hrbr is designed with  the developer in mind, all of the functions are grouped by application.  That way you can see information pertinent to an application regardless of how many systems it's running on or our many other applications are running on that system.
 |Beacon|A Beacon is anything that collects information from an application.  Generally Beacons can be implemented in one of three ways.
