@@ -5,7 +5,7 @@ This how-to will show you how to do an integration with Slack so you can send fo
 Application | |
 --- | ---
 __Slack__  | You must be a Slack admin to do this integration.
-__Harbor__  | Any Harbor user can perform this action.
+__Hrbr__  | Any hrbr user can perform this action.
 
 ## Slack
 
@@ -40,7 +40,7 @@ And now Slack will have created your webhook url.  You will see it at the bottom
 
 ![webhook-url](img/slack-integration/webhook-url.png)
 
-## Harbor
+## Hrbr
 
 Now proceed back to [cloud.hrbr.io](https://cloud.hrbr.io).  Select the app you would like to add the Slack Foghorn alert to.  Add a new foghorn or edit an existing one.  Choose <button>Add a Response ∨</button> and select **Add Slack Response**.  Then copy your Slack web hook into the **Hook URL** field and choose the <button style="background-color:gray; color:white">Submit</button>.  Your are good to go!
 

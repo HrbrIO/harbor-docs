@@ -9,10 +9,10 @@
     <div class="col-md-9">
       <div class="row">
         <div class="col-md-12">
-          <h1 style="text-align: center;color: rgb(49, 128, 194);font-weight: bold">Welcome to Harbor Docs!</h1>
+          <h1 style="text-align: center;color: rgb(49, 128, 194);font-weight: bold">Welcome to Hrbr Docs!</h1>
         </div>
       </div>
-      <h3 style="text-align:center">Want to learn more about how to best use Harbor?  Click one of the handy links below to get started.</h3>
+      <h3 style="text-align:center">Want to learn more about how to best use Hrbr?  Click one of the handy links below to get started.</h3>
       <br>
       <div class="row">
         <div class="col-md-3">
