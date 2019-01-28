@@ -6,7 +6,7 @@ Before you start this guide you may want to familiarize yourself with our basic 
 
 You can use your Google Account ID, Github Login or just use your e-mail.
 
-![sign](img/quick-start/sign-in-sign-up.jpg)
+![sign](img/quick-start/sign-in-sign-up.png)
 
 ## Create an Org
 If you aren't already in an organization, you will need to create an organization.  All applications have to belong to an organization.
