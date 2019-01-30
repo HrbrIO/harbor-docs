@@ -11,7 +11,7 @@ theme:
     font: default
     feature: default
 #    tabs: true
-    favicon: img/favicon-new.ico
+    favicon: img/favicon-32x32.png
     highlightjs: true
 
 
