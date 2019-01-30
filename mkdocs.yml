@@ -1,17 +1,17 @@
-site_name: Harbor Docs
+site_name: Hrbr Docs
 
 theme:
 #    name: cinder
     name: null
     custom_dir: mkdocs-material/material
 #    theme_dir: mkdocs-material/material
-    logo: img/Hrbr 200 px white logo 144 ppi,png
+    logo: img/square-white-bug.png
     language: en
     palette: default
     font: default
     feature: default
 #    tabs: true
-    favicon: 'img/favicon.ico'
+    favicon: img/favicon-new.ico
     highlightjs: true
 
 
