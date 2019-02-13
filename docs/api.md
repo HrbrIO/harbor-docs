@@ -108,7 +108,7 @@ This will send out every message on your API key which for now means every messa
 
 Sample url:
 
-`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6`
+`wss://harbor-stream.hrbr.io/stream/e973ca712cbf357ca071ab85a582b4c7`
 
 ### Message by Beacon
 
@@ -123,7 +123,7 @@ BEACON_MESSAGE_TYPE   |__NO__| You can assign a beacon message type as an additi
 
 Sample url:
 
-`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/beacon/953d849c-e365-1004-8599-42b1febe886f/type/MONGOINFO`
+`wss://harbor-stream.hrbr.io/stream/e973ca712cbf357ca071ab85a582b4c7/beacon/953d849c-e365-1004-8599-42b1febe886f/type/MONGOINFO`
 
 
 ### Message Stream by App
@@ -139,7 +139,7 @@ BEACON_MESSAGE_TYPE   |__NO__| You can assign a beacon message type as an additi
 
 Sample url:
 
-`wss://harbor-stream.io/stream/e973ca712cbf357ca071ab85a582b4c6/application/4539a508-e3aa-1004-8710-6bb8457af470/type/MONGOINFO`
+`wss://harbor-stream.hrbr.io/stream/e973ca712cbf357ca071ab85a582b4c7/application/4539a508-e3aa-1004-8710-6bb8457af470/type/MONGOINFO`
 
 ### Test your streams
 
