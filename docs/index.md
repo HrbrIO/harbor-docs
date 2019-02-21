@@ -26,7 +26,7 @@
          <a href="api/index.html"><img src="/img/api-200.png"><h4 style="text-align: center; color: rgb(49, 128, 194">API Docs</h3></a></a>
         </div>
         <div class="col-md-3">
-          <a href="https://shiptoshore.hrbr.io/"><img src="/img/community-200.png"><h4 style="text-align: center; color: rgb(49, 128, 194">Community</h3></a></a>
+          <a href="https://slackin.hrbr.io/"><img src="/img/community-200.png"><h4 style="text-align: center; color: rgb(49, 128, 194">Community</h3></a></a>
         </div>
       </div>
     </div>
