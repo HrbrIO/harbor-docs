@@ -8,37 +8,43 @@ You can use your Google Account ID, Github Login or just use your e-mail.
 
 ![sign](img/quick-start/sign-in-sign-up.png)
 
-## Create an Org
+<!-- ## Create an Org
 If you aren't already in an organization, you will need to create an organization.  All applications have to belong to an organization.
 
 ![create-org](img/quick-start/create-org-before.png)
-![create-org-complete](img/quick-start/create-org-after.png)
+![create-org-complete](img/quick-start/create-org-after.png) -->
 
-## Add an Application
-Click the Apps menu.
+## Create an Application
+This first thing box you'll see is a Create an application pop-up.  This allows you to start right away.
 
-![applications](img/quick-start/add-app-before.png)
+!!! Warning
+    Your first application will be created in your Sandbox organization.  Only you will have access to it.  To create applications to share you will need create an Organization first.  See Create Orgs below.
+
+![applications](img/quick-start/create-an-application.png)
 
 Select the add an application button.
 Add an application ID.
 
 !!! Tip
-    We sugguest you use the same reverse dns notation you use for your apps in general.  i.e `io.hrbr.hellapp:1.0.0`
+    We sugguest you use the same reverse dns notation you use for your apps in general.  i.e `io.hrbr.docs:1.0.0`
 
-![add-application](img/quick-start/helloharbor-application-screen.png)
+![add-application](img/quick-start/new-application.png)
 
 ## Beacons
 
 ### Create a Beacon
 Once you've added your application the first thing you have to do is add a Beacon in for that application.
 
+![create-beacon](img/quick-start/create-beacon.png)
+
 !!! Reminder
     A Beacon collects data relevant to your application and sends that data to Hrbr.
 
 Pre-written Beacon templates can be found in the Hrbr Catalog.
-For this guide we will use a pre-written Beacon to check the system stats of one of our database servers.
-I'm going to the catalog to find `Hello, Harbor!`.  That's a beacon used for learning how to use Hrbr.
-You can directly go to this Beacon at [ https://github.com/HrbrIO/HelloHarborBeacon](https://github.com/HrbrIO/HelloHarborBeacon)
+For this guide we will use a pre-written Beacon to check the system stats on our doc servers.
+
+!!! info
+    If you want to jump ahead and look at this yourself go to the ![catalog](img/quick-start/helloharbor-catalog.png) and check out the  `LinuxSysInfoBeacon`.  That's a beacon used for learning how to use Hrbr. You can directly go to this Beacon at [ https://github.com/HrbrIO/HelloHarborBeacon](https://github.com/HrbrIO/HelloHarborBeacon)
 
 ![catalog](img/quick-start/helloharbor-catalog.png)
 
